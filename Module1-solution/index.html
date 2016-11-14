@@ -1,14 +1,14 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="angular.min.js"></script>
-    <script src="app-lunch-checker.js"></script>
+    <script src="applunchchecker.js"></script>
   </head>
-<body ng-app"LunchChecker">
+<body ng-app="LunchChecker">
    <div class="container">
      <h1>Lunch Checker</h1>
      <div ng-controller="LunchCheckerController">
@@ -18,14 +18,11 @@
              class="form-control" ng-model="lunchtext">
          </div>
          <div class="form-group">
-             <button class="btn btn-default">Check If Too Much</button>
+             <button class="btn btn-default" ng-click="displayMessag();">Check If Too Much</button>
          </div>
          <div class="form-group message">
            <!-- Your message can go here. -->
-           <div><h4>
-            {{totalValue}}
-           {{lunchtext}}</div></h4>
-           <div>Total Numeric value of person's name is: {{totalValue}}</div>
+           <div>{{message}}</div>
          </div>
          </div>
    </div>
