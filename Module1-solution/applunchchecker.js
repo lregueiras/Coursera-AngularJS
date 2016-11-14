@@ -3,7 +3,10 @@
 
 angular.module('LunchChecker', [])
 
-.controller('LunchCheckerController', function ($scope) {
+.controller('LunchCheckerController', LunchCheckerController);
+
+LunchCheckerController.$inject=['$scope'];
+function LunchCheckerController ($scope) {
   $scope.lunchtext = "";
   $scope.message = "";
   $scope.splitlunchtext = "";
@@ -36,8 +39,6 @@ angular.module('LunchChecker', [])
 
     return tempString;
   };
-
-});
-
+};
 
 })();
